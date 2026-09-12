@@ -13,7 +13,10 @@
 > Especially when a child is in charge.
 
 ### **Run Easiest:** 
+
+
 open client/index.html directly in a browser.
+
 Server mode: npm install then npm start, then open http://localhost:3000.
 
 ---
