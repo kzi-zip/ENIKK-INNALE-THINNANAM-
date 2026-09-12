@@ -1,6 +1,4 @@
-Team Name: 404 not found
-Khaula Zumar I
-Ansar Women's College Perumpilaavu
+
 
 # ENIKK INNALE THINNANAM
 
