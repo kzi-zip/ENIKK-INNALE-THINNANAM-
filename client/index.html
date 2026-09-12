@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ENIKK INNALE THINNANAM — Where Goo Goo Gaa Comes to Life</title>
+  <meta name="description"
+    content="A playful reality simulator based on Child Logic. When a child asks something impossible, ENIKK INNALE THINNANAM says 'Okay' and makes reality listen.">
+
+  <!-- Fonts matching the Figma Comic Neo-Brutalist Aesthetic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;500;600;700;800;900&family=Patrick+Hand&family=Rubik:wght@700;800;900&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- TOP TICKER BAR (EXACT FIGMA YELLOW STRIP) -->
+  <div class="top-ticker-bar" aria-hidden="true">
+    <div class="ticker-track">
+      <span>IMAGINATION MAXIMUM</span>
+      <span class="ticker-dash">—</span>
+      <span>CONSEQUENCES PENDING</span>
+      <span class="ticker-dash">—</span>
+      <span>ABSURDITY CRITICAL</span>
+      <span class="ticker-dash">—</span>
+      <span>CHILD LOGIC 100%</span>
+      <span class="ticker-dash">—</span>
+      <span>PHYSICS DISABLED</span>
+      <span class="ticker-dash">—</span>
+      <span>REALITY ALTERATION ENGAGED</span>
+      <span class="ticker-dash">—</span>
+      <span>A CHILD ASKS. REALITY LISTENS.</span>
+      <span class="ticker-dash">—</span>
+      <span>DECISION: OKAY.</span>
+      <span class="ticker-dash">—</span>
+      <!-- Repeated for seamless loop -->
+      <span>IMAGINATION MAXIMUM</span>
+      <span class="ticker-dash">—</span>
+      <span>CONSEQUENCES PENDING</span>
+      <span class="ticker-dash">—</span>
+      <span>ABSURDITY CRITICAL</span>
+      <span class="ticker-dash">—</span>
+      <span>CHILD LOGIC 100%</span>
+      <span class="ticker-dash">—</span>
+      <span>PHYSICS DISABLED</span>
+      <span class="ticker-dash">—</span>
+      <span>REALITY ALTERATION ENGAGED</span>
+      <span class="ticker-dash">—</span>
+      <span>A CHILD ASKS. REALITY LISTENS.</span>
+      <span class="ticker-dash">—</span>
+      <span>DECISION: OKAY.</span>
+      <span class="ticker-dash">—</span>
+    </div>
+  </div>
+
+  <!-- BRAND HEADER -->
+  <header class="app-header">
+    <div class="header-top-bar">
+      <div class="header-motto-tag">
+        <span class="motto-pulse">●</span>
+        <span>A CHILD ASKS. REALITY LISTENS.</span>
+      </div>
+      <div class="header-controls-group">
+        <button id="btn-music-toggle" class="neo-btn small-btn" title="Toggle Toy Music Box">
+          <span>🎵 Music</span>
+        </button>
+        <button id="btn-sound-toggle" class="neo-btn small-btn active" title="Toggle Sound Effects">
+          <span>🔔 SFX: ON</span>
+        </button>
+        <button id="btn-open-drawing-header" class="neo-btn draw-header-btn" title="Open Crayon Drawing Studio">
+          <span>🖍️ Draw It</span>
+        </button>
+        <button id="btn-clear-reality" class="neo-btn reset-btn" title="Reset all reality anomalies">
+          <span>🧹 Reset</span>
+        </button>
+        <button id="btn-about" class="neo-btn about-btn" title="Our Philosophy">
+          <span>ℹ️ About</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- COMMANDING CENTERED BRAND HERO -->
+    <div class="brand-hero-center" id="brand-home-btn" role="banner" aria-label="Enikk Innale Thinnanam Home">
+      <div class="brand-title-wrapper">
+        <span class="brand-emoji-float emoji-left">🎨</span>
+        <h1 class="brand-title-center">ENIKK INNALE THINNANAM</h1>
+        <span class="brand-emoji-float emoji-right">✨</span>
+      </div>
+      <div class="brand-caption-banner">
+        <span class="badge-sparkle">★</span>
+        <p class="brand-caption-center">Where Goo Goo Gaa Gaa Comes to Life.</p>
+        <span class="badge-sparkle">★</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN PAGE CONTENT -->
+  <main class="page-container">
+
+    <!-- HERO SECTION: WHAT DO YOU WANT TO MAKE REAL? (EXACT FIGMA LAYOUT) -->
+    <section class="hero-request-section">
+      <!-- Outlined Star Doodle in Upper Right -->
+      <div class="doodle-star-top-right">
+        <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polygon
+            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+            fill="#F59E0B" />
+        </svg>
+      </div>
+
+      <!-- 3D Layered Comic Heading -->
+      <h2 class="hero-heading-3d">
+        WHAT DO YOU WANT<br>TO MAKE REAL?
+      </h2>
+      <p class="hero-subtext">Say something impossible, silly, or completely ridiculous.</p>
+
+      <!-- Neo-Brutalist Big Request Card -->
+      <div class="request-card">
+        <form id="reality-form" class="reality-card-form" onsubmit="return false;">
+          <textarea id="reality-input" class="reality-textarea" placeholder="I want to be a giant" rows="3"
+            maxlength="200" spellcheck="false" required></textarea>
+
+          <div class="request-actions-row">
+            <button type="submit" id="btn-make-real" class="make-it-happen-btn">
+              MAKE IT HAPPEN
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- THE CLASSICS CLOUD (EXACT FIGMA PILLS) -->
+      <div class="classics-section">
+        <div class="classics-divider">— or try one of these classics —</div>
+
+        <div class="classics-cloud" id="classics-cloud">
+          <!-- Row 1 -->
+          <div class="classics-row">
+            <button class="classic-pill pill-yellow rot-neg1" data-prompt="I want to eat yesterday's biriyani.">
+              I want to eat yesterday's biriyani
+            </button>
+            <button class="classic-pill pill-yellow rot-neg1" data-prompt="I want to eat the moon.">
+              I want to eat the moon
+            </button>
+            <button class="classic-pill pill-green rot-0" data-prompt="I want a dinosaur.">
+              I want a dinosaur
+            </button>
+            <button class="classic-pill pill-pink rot-pos1" data-prompt="I want to touch a rainbow.">
+              I want to touch a rainbow
+            </button>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="classics-row">
+            <button class="classic-pill pill-blue rot-0" data-prompt="I want a cloud in my room.">
+              I want a cloud in my room
+            </button>
+            <button class="classic-pill pill-orange rot-0" data-prompt="Turn my homework into pizza.">
+              Turn my homework into pizza
+            </button>
+            <button class="classic-pill pill-purple rot-0" data-prompt="Make a penguin fly.">
+              Make a penguin fly
+            </button>
+          </div>
+
+          <!-- Row 3 -->
+          <div class="classics-row">
+            <button class="classic-pill pill-cyan rot-neg1" data-prompt="I want to hug a cloud.">
+              I want to hug a cloud
+            </button>
+            <button class="classic-pill pill-magenta rot-pos1" data-prompt="I want to be a giant.">
+              I want to be a giant
+            </button>
+            <button class="classic-pill pill-orange rot-0" data-prompt="Make it rain cookies.">
+              Make it rain cookies
+            </button>
+          </div>
+
+          <!-- Row 4 -->
+          <div class="classics-row">
+            <button class="classic-pill pill-purple rot-0" data-prompt="Make my chair marry a dinosaur.">
+              Make my chair marry a dinosaur
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: THE REALITY ENGINE -->
+    <section class="reality-engine-section">
+      <!-- Outlined Cloud Doodle -->
+      <div class="doodle-cloud-icon">
+        <svg width="48" height="32" viewBox="0 0 48 32" fill="none" stroke="#000000" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 28h24a10 10 0 0 0 2-19.8A12 12 0 0 0 14 10.4 8 8 0 0 0 12 28z" fill="#FFFFFF" />
+        </svg>
+      </div>
+
+      <h2 class="engine-heading-3d">THE REALITY ENGINE</h2>
+
+      <!-- MAIN BLACK DISPLAY VIEWPORT (WITH LIVE CANVAS & RETRO CONSOLE) -->
+      <div class="engine-display-card">
+        <!-- Interactive 2D Physics Canvas -->
+        <canvas id="reality-canvas"></canvas>
+
+        <!-- Starry Background Dots -->
+        <div class="engine-stars" aria-hidden="true">
+          <span class="star-dot s-1"></span>
+          <span class="star-dot s-2"></span>
+          <span class="star-dot s-3"></span>
+          <span class="star-dot s-4"></span>
+          <span class="star-dot s-5"></span>
+          <span class="star-dot s-6"></span>
+          <span class="star-dot s-7"></span>
+          <span class="star-dot s-8"></span>
+          <span class="star-dot s-9"></span>
+        </div>
+
+        <!-- Retro Toy Synthesizer / Console Graphic (Centered in display) -->
+        <div class="retro-console-graphic" id="retro-console">
+          <div class="console-box">
+            <div class="console-top-screens">
+              <div class="screen-pink">
+                <span class="screen-yellow-dial"></span>
+              </div>
+              <div class="screen-blue"></div>
+            </div>
+            <div class="console-buttons-row">
+              <span class="btn-block btn-cyan"></span>
+              <span class="btn-block btn-red"></span>
+              <span class="btn-block btn-yellow"></span>
+            </div>
+            <div class="console-dials-row">
+              <span class="dial-knob"></span>
+              <span class="dial-knob"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Status Readout HUD -->
+        <div class="engine-readout-hud">
+          <div class="processing-label" id="engine-processing-label">REALITY ENGINE STANDBY</div>
+          <div class="active-prompt-display" id="engine-active-prompt">"Awaiting an impossible request..."</div>
+
+          <button class="status-badge-btn" id="engine-status-badge">
+            <span id="engine-status-badge-text">READY FOR CHILD LOGIC</span>
+          </button>
+        </div>
+
+        <!-- Canvas Drag / Toss Tip -->
+        <div class="canvas-interact-tip">
+          <span>✨ Click, drag, and toss anything that appears!</span>
+        </div>
+      </div>
+
+      <!-- REALITY SNAPSHOT & GENERATED IMAGE CONTROLS -->
+      <div class="reality-snapshot-bar" id="reality-snapshot-bar">
+        <div class="snapshot-badge-group">
+          <span class="snapshot-camera-icon">📸</span>
+          <div class="snapshot-text-col">
+            <span class="snapshot-title">SCENARIO SNAPSHOT & GENERATED ARTWORK</span>
+            <span class="snapshot-subtitle" id="snapshot-status-hint">Every altered reality generates a certified storybook picture.</span>
+          </div>
+        </div>
+        <div class="snapshot-buttons-row">
+          <button type="button" id="btn-view-snapshot" class="neo-btn snapshot-btn" title="View Polaroid Snapshot">
+            <span>🖼️ View Polaroid</span>
+          </button>
+          <button type="button" id="btn-download-snapshot" class="neo-btn snapshot-btn-gold" title="Download Generated Scenario Picture">
+            <span>💾 Save Image</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- SIDE-BY-SIDE: ENGINE STATUS & EVENT TIMELINE (EXACT FIGMA DASHBOARD) -->
+      <div class="engine-diagnostics-grid">
+
+        <!-- CARD 1: REALITY ENGINE STATUS (DARK TERMINAL) -->
+        <div class="diagnostic-card dark-terminal-card">
+          <div class="terminal-card-title">— REALITY ENGINE STATUS —</div>
+          <div class="terminal-table">
+            <div class="term-row">
+              <span class="term-key">REALITY STATUS</span>
+              <span class="term-val val-unstable" id="stat-reality-status">UNSTABLE</span>
+            </div>
+            <div class="term-row">
+              <span class="term-key">CHILD LOGIC</span>
+              <span class="term-val val-green" id="stat-child-logic">100%</span>
+            </div>
+            <div class="term-row">
+              <span class="term-key">PHYSICS</span>
+              <span class="term-val val-orange" id="stat-physics">CURRENTLY IGNORING</span>
+            </div>
+            <div class="term-row">
+              <span class="term-key">COMMON SENSE</span>
+              <span class="term-val val-red" id="stat-common-sense">DISABLED</span>
+            </div>
+            <div class="term-row">
+              <span class="term-key">IMAGINATION</span>
+              <span class="term-val val-green" id="stat-imagination">MAXIMUM</span>
+            </div>
+            <div class="term-row">
+              <span class="term-key">REALITY INTEGRITY</span>
+              <span class="term-val val-blue" id="stat-reality-integrity">42%</span>
+            </div>
+            <div class="term-row">
+              <span class="term-key">ABSURDITY LEVEL</span>
+              <span class="term-val val-pink" id="stat-absurdity">CRITICAL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2: EVENT TIMELINE (WHITE CARD) -->
+        <div class="diagnostic-card white-card">
+          <div class="white-card-title">EVENT TIMELINE</div>
+          <div class="timeline-steps-list" id="timeline-list">
+            <div class="timeline-step" data-step="1">
+              <span class="step-num">01</span>
+              <span class="step-label">REQUEST RECEIVED</span>
+            </div>
+            <div class="timeline-step" data-step="2">
+              <span class="step-num">02</span>
+              <span class="step-label">PHYSICS OBJECTS</span>
+            </div>
+            <div class="timeline-step" data-step="3">
+              <span class="step-num">03</span>
+              <span class="step-label">COMMON SENSE OVERRIDDEN</span>
+            </div>
+            <div class="timeline-step" data-step="4">
+              <span class="step-num">04</span>
+              <span class="step-label">REALITY MODIFIED</span>
+            </div>
+            <div class="timeline-step" data-step="5">
+              <span class="step-num">05</span>
+              <span class="step-label">IMPOSSIBLE EVENT</span>
+            </div>
+            <div class="timeline-step" data-step="6">
+              <span class="step-num">06</span>
+              <span class="step-label">CONSEQUENCES</span>
+            </div>
+            <div class="timeline-step" data-step="7">
+              <span class="step-num">07</span>
+              <span class="step-label">RESTORING NORMALITY</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HORIZONTAL MULTI-COLOR RAINBOW STRIP DIVIDER (FIGMA REPLICATED) -->
+    <div class="rainbow-stripe-divider" aria-hidden="true">
+      <span class="r-band r-pink"></span>
+      <span class="r-band r-orange"></span>
+      <span class="r-band r-yellow"></span>
+      <span class="r-band r-green"></span>
+      <span class="r-band r-cyan"></span>
+      <span class="r-band r-blue"></span>
+      <span class="r-band r-purple"></span>
+      <span class="r-band r-magenta"></span>
+      <span class="r-band r-teal"></span>
+    </div>
+
+    <!-- SECTION 3: REALITY METRICS & LABORATORY LOG -->
+    <section class="metrics-lab-section">
+      <div class="metrics-lab-grid">
+
+        <!-- CARD 1: REALITY METRICS -->
+        <div class="metric-card white-card">
+          <div class="white-card-title">REALITY METRICS</div>
+
+          <div class="metric-bars-group">
+            <div class="metric-item">
+              <div class="metric-header">
+                <span class="metric-name">PHYSICS STABILITY</span>
+                <span class="metric-pct" id="val-physics-stab">18%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-bar bar-pink" id="bar-physics-stab" style="width: 18%"></div>
+              </div>
+            </div>
+
+            <div class="metric-item">
+              <div class="metric-header">
+                <span class="metric-name">LOGIC COHERENCE</span>
+                <span class="metric-pct" id="val-logic-coh">7%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-bar bar-orange" id="bar-logic-coh" style="width: 7%"></div>
+              </div>
+            </div>
+
+            <div class="metric-item">
+              <div class="metric-header">
+                <span class="metric-name">CHILD HAPPINESS</span>
+                <span class="metric-pct" id="val-child-hap">100%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-bar bar-green" id="bar-child-hap" style="width: 100%"></div>
+              </div>
+            </div>
+
+            <div class="metric-item">
+              <div class="metric-header">
+                <span class="metric-name">REALITY INTEGRITY</span>
+                <span class="metric-pct" id="val-reality-integ">42%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-bar bar-blue" id="bar-reality-integ" style="width: 42%"></div>
+              </div>
+            </div>
+
+            <div class="metric-item">
+              <div class="metric-header">
+                <span class="metric-name">ABSURDITY LEVEL</span>
+                <span class="metric-pct" id="val-absurdity-lvl">97%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-bar bar-purple" id="bar-absurdity-lvl" style="width: 97%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2: LABORATORY LOG -->
+        <div class="lab-card cream-card">
+          <div class="lab-card-title">LABORATORY LOG</div>
+          <p class="lab-card-sub">Recent ridiculous requests processed:</p>
+
+          <div class="log-entries-list" id="laboratory-log-list">
+            <div class="log-entry">
+              <span class="log-badge badge-red">1</span>
+              <span class="log-text">"I want to eat the moon"</span>
+            </div>
+            <div class="log-entry">
+              <span class="log-badge badge-orange">2</span>
+              <span class="log-text">"Make the toaster chase the moon"</span>
+            </div>
+            <div class="log-entry">
+              <span class="log-badge badge-yellow">3</span>
+              <span class="log-text">"I want a dinosaur"</span>
+            </div>
+            <div class="log-entry">
+              <span class="log-badge badge-green">4</span>
+              <span class="log-text">"I want to touch a rainbow"</span>
+            </div>
+            <div class="log-entry">
+              <span class="log-badge badge-blue">5</span>
+              <span class="log-text">"I want a cloud in my room"</span>
+            </div>
+          </div>
+
+          <div class="lab-status-footer">
+            <span class="green-status-dot"></span>
+            <span>Reality Engine Online</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: PINNED NOTE — TRY SOMETHING RIDICULOUS. -->
+    <section class="pinned-note-section">
+      <div class="pinned-note-card">
+        <div class="pin-head"></div>
+        <h3 class="pinned-title">TRY SOMETHING RIDICULOUS.</h3>
+
+        <div class="pinned-tips-list">
+          <div class="tip-row">
+            <span class="tip-arrow">⤹</span>
+            <span class="tip-text"><strong>Be specific.</strong></span>
+          </div>
+          <div class="tip-row">
+            <span class="tip-arrow">⤹</span>
+            <span class="tip-text"><strong>Time travel is allowed.</strong> Yes, you can finally eat yesterday's
+              biriyani.</span>
+          </div>
+          <div class="tip-row">
+            <span class="tip-arrow">⤹</span>
+            <span class="tip-text"><strong>Don't worry if it makes sense.</strong> Reality is our problem.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="app-footer">
+      <div class="footer-title">ENIKK INNALE THINNANAM</div>
+      <div class="footer-sub">Where Goo Goo Gaa Gaa Comes to Life. • A Child Asks. Reality Listens.</div>
+    </footer>
+
+  </main>
+
+  <!-- FLOATING QUESTION MARK (?) BUTTON FOR THE SOUL -->
+  <button id="floating-about-btn" class="floating-help-btn" title="The Soul of This World">?</button>
+
+  <!-- SERIOUS REALITY ALTERATION BUREAU HUD MODAL -->
+  <div id="bureau-modal" class="modal-backdrop" aria-hidden="true">
+    <div class="bureau-window">
+      <div class="bureau-header">
+        <div class="bureau-badge">
+          <span class="bureau-seal">🏛️</span>
+          <span class="bureau-title">DEPARTMENT OF CHILD LOGIC & REALITY ADJUSTMENT</span>
+        </div>
+        <span class="case-file-id" id="case-file-id">CASE #8839-OK</span>
+      </div>
+
+      <div class="bureau-body">
+        <div class="terminal-screen" id="bureau-terminal"></div>
+
+        <div class="bureau-status-bar">
+          <div class="status-indicator">
+            <span class="status-dot pulsing"></span>
+            <span id="bureau-status-text">PROCESSING CHILD LOGIC...</span>
+          </div>
+          <div class="bureau-progress-track">
+            <div class="bureau-progress-fill" id="bureau-progress-fill"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bureau-stamp-area" id="bureau-stamp-area">
+        <div class="bureau-stamp" id="bureau-stamp">
+          <span class="stamp-border"></span>
+          <span class="stamp-text">DECISION: OKAY.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CRAYON DRAWING STUDIO MODAL -->
+  <div id="drawing-modal" class="modal-backdrop" aria-hidden="true">
+    <div class="drawing-window">
+      <div class="drawing-header">
+        <div class="drawing-title-group">
+          <span class="drawing-icon">🖍️</span>
+          <h2>Crayon Drawing Studio</h2>
+        </div>
+        <p class="drawing-sub">Draw whatever impossible creature or object you want. We will bring it to life!</p>
+        <button id="btn-close-drawing" class="close-modal-btn" aria-label="Close Drawing Studio">✕</button>
+      </div>
+
+      <div class="drawing-body">
+        <div class="drawing-canvas-card">
+          <canvas id="drawing-pad" width="600" height="380"></canvas>
+        </div>
+
+        <div class="crayon-palette">
+          <div class="color-swatches" id="color-swatches">
+            <button class="swatch active" data-color="#FF2E93" style="--c: #FF2E93" title="Hot Pink"></button>
+            <button class="swatch" data-color="#38BDF8" style="--c: #38BDF8" title="Sky Blue"></button>
+            <button class="swatch" data-color="#22C55E" style="--c: #22C55E" title="Grass Green"></button>
+            <button class="swatch" data-color="#FFD600" style="--c: #FFD600" title="Sun Yellow"></button>
+            <button class="swatch" data-color="#8B5CF6" style="--c: #8B5CF6" title="Grape Purple"></button>
+            <button class="swatch" data-color="#FF6B00" style="--c: #FF6B00" title="Tangerine"></button>
+            <button class="swatch" data-color="#000000" style="--c: #000000" title="Coal Black"></button>
+            <button class="swatch eraser" data-color="eraser" title="Eraser">🧽</button>
+          </div>
+
+          <div class="brush-size-controls">
+            <span class="tool-label">Size:</span>
+            <button class="size-btn" data-size="6">Thin</button>
+            <button class="size-btn active" data-size="14">Medium</button>
+            <button class="size-btn" data-size="26">Chunky</button>
+          </div>
+
+          <div class="drawing-actions">
+            <button id="btn-clear-drawing" class="neo-btn small-btn">
+              <span>🧽 Clear</span>
+            </button>
+            <button id="btn-animate-drawing" class="make-it-happen-btn" style="padding: 10px 18px; font-size: 15px;">
+              <span>MAKE MY DRAWING REAL ✨</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT / PHILOSOPHY MODAL -->
+  <div id="about-modal" class="modal-backdrop" aria-hidden="true">
+    <div class="about-card">
+      <button id="btn-close-about" class="close-modal-btn">✕</button>
+      <div class="about-header">
+        <span class="about-icon">🌟</span>
+        <h2>ENIKK INNALE THINNANAM</h2>
+        <h3>Where Goo Goo Gaa Gaa Comes to Life.</h3>
+      </div>
+      <div class="about-content">
+        <p class="quote">“A child says something impossible.<br>An adult normally says: ‘That is
+          impossible.’<br><strong>ENIKK INNALE THINNANAM says: ‘Okay.’</strong><br>And then reality changes.”</p>
+
+        <div class="rule-box">
+          <h4>The Golden Principles</h4>
+          <ul>
+            <li>✨ <strong>Pure, Innocent & Warm:</strong> The child's imagination is never mocked.</li>
+            <li>🏛️ <strong>Serious Reality Management:</strong> The humour comes from taking innocent requests
+              completely seriously.</li>
+            <li>🪄 <strong>Living Physics:</strong> Every impossible thing arrives into the room, reacts to clicks,
+              follows your cursor, and can be tossed across the page.</li>
+            <li>🍲 <strong>Temporal Compliant:</strong> Yes, you can finally eat yesterday's biriyani.</li>
+          </ul>
+        </div>
+
+        <button id="btn-back-to-play" class="make-it-happen-btn" style="width: 100%;">
+          <span>Let's Play! ✨</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HARMLESS SIDE EFFECT TOAST BANNER -->
+  <div id="side-effect-banner" class="side-effect-toast" aria-live="polite">
+    <div class="toast-indicator">
+      <span class="toast-check">✓</span>
+    </div>
+    <div class="toast-content">
+      <div class="toast-title" id="toast-title">REQUEST COMPLETED ✓</div>
+      <div class="toast-summary" id="toast-summary">Cloud successfully delivered.</div>
+      <div class="toast-side-effect" id="toast-side-effect">
+        <span class="side-tag">SIDE EFFECT:</span>
+        <span id="toast-side-text">Humidity levels are now emotionally concerning.</span>
+      </div>
+    </div>
+    <button class="toast-close" id="toast-close-btn" aria-label="Dismiss toast">✕</button>
+  </div>
+
+  <!-- REALITY POLAROID SNAPSHOT MODAL -->
+  <div id="snapshot-modal" class="modal-backdrop" aria-hidden="true">
+    <div class="polaroid-modal-card">
+      <button id="btn-close-snapshot" class="close-modal-btn">✕</button>
+      <div class="polaroid-frame">
+        <div class="polaroid-canvas-wrap">
+          <img id="polaroid-image" alt="Scenario Generated Artwork" class="polaroid-img" />
+          <div class="polaroid-stamp">CERTIFIED OKAY ★</div>
+        </div>
+        <div class="polaroid-caption-box">
+          <h3 id="polaroid-title" class="polaroid-prompt-title">"I want to eat the moon"</h3>
+          <p id="polaroid-meta" class="polaroid-meta-info">Reality Alteration Bureau • Official Scenario Image</p>
+        </div>
+      </div>
+      <div class="polaroid-actions">
+        <button id="btn-modal-download-snapshot" class="make-it-happen-btn download-btn-modal">
+          <span>💾 Download Storybook Image</span>
+        </button>
+        <button id="btn-modal-close-snapshot" class="neo-btn">
+          <span>Back to Engine</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/soundEngine.js"></script>
+  <script src="js/behaviors.js"></script>
+  <script src="js/visualObjects.js"></script>
+  <script src="js/realityEngine.js"></script>
+  <script src="js/drawingEngine.js"></script>
+  <script src="js/uiConsole.js"></script>
+  <script src="js/backgroundDoodles.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
